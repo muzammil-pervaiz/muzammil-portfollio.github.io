@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzammil Portfolio & Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: "Baloo Bhai 2", sans-serif;
+        }
+
+
+        .items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            color: white;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item li {
+            white-space: nowrap;
+        }
+
+        .namelogo {
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .logo1 {
+            width: 70px;
+            height: 70px;
+        }
+
+        .circle {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .maincontent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 120px;
+            padding: 0 50px;
+            gap: 30px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myintro {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        @media (max-width: 1024px) {
+            .items {
+                padding: 15px 20px;
+            }
+
+            .item {
+                gap: 25px;
+                font-size: 16px;
+            }
+
+            .logo1 {
+                width: 60px;
+                height: 60px;
+            }
+
+            .namelogo {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .item li {
+                text-align: left;
+                width: 100%;
+            }
+
+            .namelogo {
+                font-size: 16px;
+            }
+
+            .maincontent {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .myintro {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo1 {
+                width: 50px;
+                height: 50px;
+            }
+
+            .namelogo {
+                font-size: 14px;
+            }
+
+            .item {
+                gap: 10px;
+            }
+
+            .item li {
+                font-size: 14px;
+            }
+
+            .myintro {
+                font-size: 18px;
+            }
+        }
+
+
+
+        .myintro {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .myintro h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .myintro p {
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        .myintro span {
+            color: #00aced;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .myintro {
+                text-align: center;
+            }
+
+            .myintro h1 {
+                font-size: 26px;
+            }
+
+            .myintro p {
+                font-size: 16px;
+            }
+        }
+
+
+
+
+        .diamond-box {
+            width: 500px;
+            min-height: 120px;
+            background: linear-gradient(145deg, #1a1a1a, #000);
+            border-radius: 20px;
+            box-shadow:
+                inset -4px -4px 10px rgba(255, 255, 255, 0.1),
+                inset 4px 4px 10px rgba(0, 0, 0, 0.7),
+                0 8px 20px rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .diamond-text {
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #b9f2ff 0%, #ffffff 40%, #89dfff 60%, #e0f7ff 80%, #b9f2ff 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+            text-shadow: 0 0 8px rgba(185, 242, 255, 0.6), 0 0 15px rgba(185, 242, 255, 0.4);
+            letter-spacing: 1px;
+            line-height: 1.5;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .diamond-box::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 0%, rgba(185, 242, 255, 0.2) 25%, transparent 50%, rgba(185, 242, 255, 0.2) 75%, transparent 100%);
+            animation: rotate 6s linear infinite;
+            mix-blend-mode: screen;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20vh;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        p {
+            font-size: 22px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #00ff99;
+            font-weight: bold;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: #00ff99;
+            margin-left: 2px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+
+        #neon-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #6ee7b7;
+            --glass: rgba(255, 255, 255, 0.04)
+        }
+
+        html,
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial
+        }
+
+        .contact-section {
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(106, 90, 255, 0.08), transparent),
+                linear-gradient(180deg, #071126 0%, var(--bg) 100%);
+            color: #e6eef8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 30;
+            background: linear-gradient(135deg, rgba(6, 8, 23, 0.95), rgba(2, 6, 23, 0.9));
+            backdrop-filter: blur(2px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.02)
+        }
+
+        .intro-name {
+            font-size: clamp(36px, 9vw, 96px);
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0;
+            transform: translateY(12px);
+            animation: popIn .9s forwards .2s
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .container {
+            width: min(1100px, 94%);
+            max-width: 1100px;
+            padding: 28px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: start
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .left {
+            min-height: 420px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-title {
+            font-size: 28px;
+            margin: 8px 0 14px
+        }
+
+        .hero-sub {
+            color: #9fb3c9;
+            margin-bottom: 18px
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(36px);
+            opacity: .45;
+            mix-blend-mode: screen
+        }
+
+        .b1 {
+            width: 360px;
+            height: 360px;
+            background: linear-gradient(145deg, #6ee7b7, #60a5fa);
+            left: -140px;
+            top: -80px
+        }
+
+        .b2 {
+            width: 260px;
+            height: 260px;
+            background: linear-gradient(145deg, #7c3aed, #ec4899);
+            right: -80px;
+            bottom: -60px;
+            opacity: .2
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        label {
+            font-size: 13px;
+            color: #a9c3d8
+        }
+
+        input,
+        textarea {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: inherit;
+            outline: none;
+            font-size: 14px
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        .btn {
+            padding: 12px;
+            border-radius: 10px;
+            border: 0;
+            background: linear-gradient(90deg, var(--accent), #60a5fa);
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: all .6s cubic-bezier(.2, .9, .2, 1)
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none
+        }
+
+        @media (max-width:920px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                order: 2
+            }
+
+            .card {
+                padding: 18px
+            }
+
+            .intro-name {
+                font-size: 56px
+            }
+        }
+
+        .typing {
+            font-family: monospace;
+            font-size: 14px;
+            color: #cdebf4
+        }
+
+        .cursor2 {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background: var(--accent);
+            margin-left: 6px;
+            vertical-align: middle;
+            animation: blink2 .9s steps(2) infinite
+        }
+
+        @keyframes blink2 {
+            50% {
+                opacity: .05
+            }
+        }
+
+        .muted {
+            color: #9fb3c9;
+            font-size: 13px
+        }
+
+
+
+
+        .skills-bar {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 0;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #94a3b8;
+
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .skills-bar span {
+            flex: 1 1 auto;
+            min-width: 100px;
+            margin: 6px 0;
+        }
+
+        @media (max-width: 480px) {
+            .skills-bar span {
+                font-size: 14px;
+            }
+        }
+
+
+
+
+
+        .heading {
+            margin-left: 50px;
+            margin-top: 30px;
+            display: inline-block;
+            padding: 4px 8px;
+            color: white;
+            border: 2px solid #89dfff;
+            border-radius: 0px;
+            animation: glowBorder 3s linear infinite;
+        }
+
+        @keyframes glowBorder {
+            0% {
+                box-shadow: 0 0 5px #89dfff;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #89dfff;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #89dfff;
+            }
+        }
+
+        .heading h1 {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #89dfff;
+            width: 0;
+            animation: typing 3s steps(15, end) forwards, blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .heading {
+            margin-left: 50px;
+            margin-top: 30px;
+            display: inline-block;
+            padding: 4px 8px;
+            color: white;
+            border: 2px solid #89dfff;
+            border-radius: 0px;
+            transition: border-radius 0.5s ease, transform 0.5s ease;
+        }
+
+        .heading:hover {
+            border-radius: 20px;
+            transform: scale(1.05) rotate(2deg);
+        }
+
+
+
+
+
+
+
+        .heading-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .heading2 {
+            display: inline-block;
+            padding: 4px 8px;
+            color: white;
+            border: 2px solid #89dfff;
+            border-radius: 0px;
+            animation: glowBorder 3s linear infinite;
+            transition: border-radius 0.5s ease, transform 0.5s ease;
+            text-align: center;
+        }
+
+        .heading2:hover {
+            border-radius: 20px;
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .heading2 h1 {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #89dfff;
+            width: 0;
+            animation: typing 3s steps(15, end) forwards, blink 0.7s infinite;
+
+        }
+
+        @keyframes glowBorder {
+            0% {
+                box-shadow: 0 0 5px #89dfff;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #89dfff;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #89dfff;
+            }
+        }
+
+        @keyframes typing {
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+
+
+
+
+        :root {
+            --shadow: 0 18px 60px rgba(0, 0, 0, .55);
+        }
+
+        .card {
+            position: relative;
+            background: linear-gradient(180deg, #131820 0%, #10151c 100%);
+            border: 1px solid #1f2733;
+            border-radius: 14px;
+            padding: 18px 18px 8px;
+            box-shadow: var(--shadow);
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .card .card-line {
+            position: absolute;
+            left: 0;
+            top: 16px;
+            bottom: 16px;
+            width: 3px;
+            border-radius: 2px;
+            background: #ff5a3c;
+        }
+
+        .service {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 10px 0 12px;
+        }
+
+        .service+.service {
+            border-top: 1px dashed #232b38;
+            margin-top: 10px;
+        }
+
+        .icon-box {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #2a3240;
+            border-radius: 10px;
+            display: inline-grid;
+            place-items: center;
+            color: #ff6a57;
+            background: #121822;
+            font-size: 20px;
+        }
+
+        .service h3 {
+            margin: 0 0 2px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .service p {
+            margin: 0;
+            color: #9fb0c8;
+            font-size: 13px;
+        }
+
+
+
+        .me {
+            background: #0e1116;
+            color: #e6edf3;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin-inline: auto;
+        }
+
+        .about {
+            padding: 34px 0 12px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 34px;
+            align-items: start;
+        }
+
+        .about-left h2 {
+            font-size: clamp(20px, 3vw, 26px);
+            margin-bottom: .5rem;
+        }
+
+        .about-left p {
+            color: #96a3b7;
+            margin-bottom: 1rem;
+            font-size: clamp(14px, 2.5vw, 16px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .stat {
+            background: #161a21;
+            border: 1px solid #1f2733;
+            border-radius: 14px;
+            padding: clamp(10px, 2vw, 16px);
+            text-align: center;
+        }
+
+        .num {
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 700;
+        }
+
+        .plus,
+        .perc {
+            color: #ff5a3c;
+        }
+
+        .label {
+            color: #9fb0c8;
+            font-size: clamp(10px, 2vw, 12.5px);
+            margin-top: 4px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #131820 0%, #10151c 100%);
+            border: 1px solid #1f2733;
+            border-radius: 14px;
+            padding: clamp(12px, 2vw, 16px);
+            box-shadow: 0 18px 60px rgba(0, 0, 0, .55);
+            max-width: 100%;
+        }
+
+        .about-side h3 {
+            margin-bottom: 6px;
+            font-size: clamp(16px, 3vw, 18px);
+        }
+
+        .about-side p {
+            color: #96a3b7;
+            margin-bottom: 10px;
+            font-size: clamp(14px, 2.5vw, 16px);
+        }
+
+        .mini-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .mini-list li {
+            color: #b7c2d5;
+            font-size: clamp(12px, 2.5vw, 14px);
+            display: flex;
+            align-items: center;
+        }
+
+        .mini-list i {
+            color: #ff5a3c;
+            margin-right: 6px;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about {
+                padding: 20px 0;
+            }
+
+            .stats {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="neon-canvas"></canvas>
+    <div class="navbar">
+        <header>
+            <nav class="items">
+                <span class="logo">
+                    <img class="logo1"
+                        src="Screenshot_2025-08-31_110432-removebg-preview.png"
+                        alt="logo">
+                </span>
+                <span class="namelogo">Muzammil <br>Developer</span>
+                <ul class="item">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Our Services</li>
+                    <li>Recent Work</li>
+                    <li>Get In Touch</li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="maincontent">
+        <div class="main">
+            <div class="circle">
+                <img src="Code with muzammil.png" alt="Profile">
+            </div>
+        </div>
+        <div class="diamond-box">
+            <div class="diamond-text">
+                Muhammad Muzammil Pervaiz<br>
+                I'm a passionate <span>Front-End Web Developer</span>, crafting modern and responsive websites using
+                HTML, CSS, and JavaScript.
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="skills-bar">
+        <span>HTML5</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>React</span>
+        <span>Git</span>
+        <span>Github</span>
+    </div>
+
+
+
+    <div class="heading-container">
+        <div class="heading">
+            <h1>Meet Muzammil</h1>
+        </div>
+    </div>
+
+
+
+
+    <div class="intro">
+        <p>
+            Hello! My name is Muzammil and I am a passionate Web Developer who enjoys creating modern websites.
+            I specialize as a <span class="highlight" id="typewriter"></span><span class="cursor"></span>
+            and I constantly work on improving my skills. My goal is to grow as a professional and
+            inspire others through my work.
+        </p>
+    </div>
+
+
+
+
+    <div class="heading-container">
+        <div class="heading2">
+            <h1>Our Services...</h1>
+        </div>
+    </div>
+
+
+
+
+    <div class="website">
+        <section class="services card">
+            <div class="card-line"></div>
+
+            <div class="service">
+                <span class="icon-box"><i class="ri-code-s-slash-line"></i></span>
+                <div>
+                    <h3>Website Development</h3>
+                    <p>Modern, fast and scalable websites</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <span class="icon-box"><i class="ri-smartphone-line"></i></span>
+                <div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile applications</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <span class="icon-box"><i class="ri-server-line"></i></span>
+                <div>
+                    <h3>Website Hosting</h3>
+                    <p>Reliable deployments and CI/CD</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <div class="me">
+        <section id="about" class="about">
+            <div class="container about-grid">
+
+                <div class="about-left">
+                    <h2>About me</h2>
+                    <p>
+                        I’m a software developer focused on clean UI, performance and scalable
+                        systems. I design, build and deploy web apps end-to-end with attention
+                        to detail and great developer experience.
+                    </p>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="num">120<span class="plus">+</span></div>
+                            <div class="label">Completed Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">95<span class="perc">%</span></div>
+                            <div class="label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">3<span class="plus">+</span></div>
+                            <div class="label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="about-side card">
+                    <h3>About me</h3>
+                    <p>
+                        Passionate about developer tooling, fast UX and robust backends.
+                    </p>
+                    <ul class="mini-list">
+                        <li><i class="ri-check-line"></i> Clean code & best practices</li>
+                        <li><i class="ri-check-line"></i> Pixel-perfect UI</li>
+                        <li><i class="ri-check-line"></i> Performance first</li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <div class="heading-container">
+        <div class="heading2">
+            <h1>Contact Us...</h1>
+        </div>
+    </div>
+
+
+
+    <section class="contact-section">
+        <div class="overlay" id="intro2">
+            <div style="text-align:center">
+                <div class="intro-name">Muzammil</div>
+                <div class="muted" style="margin-top:10px;opacity:.9">Contact page ko dekhnay keliye thori dair...</div>
+            </div>
+        </div>
+
+        <main class="container" aria-live="polite">
+            <section class="card left">
+                <div class="blob b1" aria-hidden></div>
+                <div class="blob b2" aria-hidden></div>
+
+                <h2 class="hero-title reveal" id="title">Hello — I'm Muzammil</h2>
+                <p class="hero-sub reveal" id="sub">You’ll receive the message — from here you can directly send an
+                    email or a WhatsApp link.</p>
+
+                <div class="card" style="margin-top:10px;backdrop-filter: blur(6px);">
+                    <div class="typing reveal" id="typingLine">Loading contact details<span class="cursor2"></span>
+                    </div>
+                    <div class="reveal" id="details" style="margin-top:12px;display:none">
+                        <p class="muted">Email: <strong>muzammiltechcanvas@gmail.com</strong></p>
+                        <p class="muted">WhatsApp: <strong>+92 3474362857</strong></p>
+                        <p class="muted">Location: <strong>Pakistan</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="card" aria-label="Contact form">
+                <h3 style="margin:0 0 8px" class="reveal" id="formTitle">Get in touch</h3>
+                <p class="muted reveal" id="formNote">Please share your details—I’ll reply shortly.</p>
+
+                <form id="contactForm" class="reveal" style="margin-top:12px" action="https://formspree.io/f/xdkljqzv"
+                    method="POST">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" placeholder="Your Name" required />
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write Anything..." required></textarea>
+
+                    <button class="btn" type="submit">Send message</button>
+                    <div id="sent" style="margin-top:8px;display:none;color:#b5ffd8">Message queued </div>
+                </form>
+            </aside>
+        </main>
+    </section>
+
+    <script>
+        const words = ["Frontend and Backend developer", "Web Designer", "S.E.O manger"];
+        let currentWordIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typewriter");
+
+        function typeEffect() {
+            const currentWord = words[currentWordIndex];
+            if (!isDeleting) {
+                typingElement.textContent = currentWord.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+                if (currentCharIndex === currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1000);
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentWord.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentWordIndex = (currentWordIndex + 1) % words.length;
+                }
+            }
+            setTimeout(typeEffect, isDeleting ? 100 : 200);
+        }
+        typeEffect();
+
+        (function () {
+            const canvas = document.getElementById('neon-canvas');
+            const ctx = canvas.getContext('2d', { alpha: true });
+            const config = { color: '#00ffd5', glowColor: '#00ffd5', lineWidth: 9.5, maxPoints: 80, pointSpacing: 2.5, fadeSpeed: 0.02, curvature: 0.5, composite: 'lighter' };
+            function resize() {
+                const dpr = window.devicePixelRatio || 1;
+                canvas.width = Math.round(window.innerWidth * dpr);
+                canvas.height = Math.round(window.innerHeight * dpr);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            window.addEventListener('resize', resize, { passive: true });
+            resize();
+            const points = [];
+            let lastPos = null;
+            window.addEventListener('pointermove', (e) => {
+                const x = e.clientX; const y = e.clientY;
+                if (!lastPos || Math.hypot(x - lastPos.x, y - lastPos.y) >= config.pointSpacing) {
+                    points.push({ x, y, life: 1 }); lastPos = { x, y };
+                    if (points.length > config.maxPoints) points.shift();
+                }
+            }, { passive: true });
+            window.addEventListener('pointerdown', (e) => {
+                points.push({ x: e.clientX, y: e.clientY, life: 1 });
+                if (points.length > config.maxPoints) points.shift();
+            }, { passive: true });
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.globalCompositeOperation = config.composite;
+                ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+                ctx.save(); ctx.lineWidth = config.lineWidth * 4;
+                ctx.strokeStyle = config.color; ctx.shadowBlur = 32;
+                ctx.shadowColor = config.glowColor; drawPath(0.12); ctx.restore();
+                ctx.save(); ctx.lineWidth = config.lineWidth * 1.2;
+                ctx.strokeStyle = '#ffffff'; ctx.shadowBlur = 12;
+                ctx.shadowColor = config.glowColor; drawPath(0.8); ctx.restore();
+                for (let i = 0; i < points.length; i++) points[i].life -= config.fadeSpeed;
+                while (points.length && points[0].life <= 0) points.shift();
+                requestAnimationFrame(draw);
+            }
+            function drawPath(alphaMultiplier) {
+                if (points.length < 2) return;
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+                for (let i = 1; i < points.length; i++) {
+                    const prev = points[i - 1]; const cur = points[i];
+                    const midX = prev.x + (cur.x - prev.x) * config.curvature;
+                    const midY = prev.y + (cur.y - prev.y) * config.curvature;
+                    ctx.quadraticCurveTo(prev.x, prev.y, midX, midY);
+                }
+                const avgLife = points.reduce((s, p) => s + p.life, 0) / points.length;
+                ctx.globalAlpha = Math.max(0, Math.min(1, avgLife * alphaMultiplier));
+                ctx.stroke(); ctx.globalAlpha = 1;
+            }
+            requestAnimationFrame(draw);
+        })();
+    </script>
+
+
+    <script>
+        const intro2 = document.getElementById('intro2');
+        const reveals = document.querySelectorAll('.reveal');
+        const typingLine = document.getElementById('typingLine');
+        const details = document.getElementById('details');
+
+        function typeText(element, text, delay = 30) {
+            element.textContent = '';
+            let i = 0;
+            const t = setInterval(() => { element.textContent += text[i++] || ''; if (i > text.length - 1) clearInterval(t) }, delay);
+            return new Promise(r => setTimeout(r, text.length * delay + 150));
+        }
+
+        async function playSequence() {
+            await new Promise(r => setTimeout(r, 1400));
+            intro2.classList.add('hidden');
+            for (let i = 0; i < reveals.length; i++) {
+                const el = reveals[i];
+                setTimeout(() => el.classList.add('show'), i * 120);
+            }
+            await typeText(typingLine, 'Contact details: muzammiltechcanvas@gmail.com');
+            setTimeout(() => { details.style.display = 'block'; details.classList.add('show') }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => playSequence());
+    </script>
+
+</body>
+
+</html>
